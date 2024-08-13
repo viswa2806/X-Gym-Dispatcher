@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="sample_2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1099.2,25627.2" sap2010:WorkflowViewState.IdRef="sample_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable1" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ugase="clr-namespace:UiPath.GSuite.Activities.Sheets.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="sample_2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1138.4,22673.6" sap2010:WorkflowViewState.IdRef="sample_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable1" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ugase="clr-namespace:UiPath.GSuite.Activities.Sheets.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -129,9 +129,10 @@
       <AssemblyReference>Studio.Generated.TypedDataTable3</AssemblyReference>
       <AssemblyReference>Studio.Generated.TypedDataTable4</AssemblyReference>
       <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable5</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="mailDispatcher" sap:VirtualizedContainerService.HintSize="961.6,25562.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="mailDispatcher" sap:VirtualizedContainerService.HintSize="979.2,22608.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd1:DataTable" Name="Excel_dt" />
       <Variable x:TypeArguments="x:String" Name="stDate" />
@@ -160,13 +161,15 @@
       <Variable x:TypeArguments="x:String" Name="Maildate" />
       <Variable x:TypeArguments="x:String" Name="FirstName" />
       <Variable x:TypeArguments="x:String" Name="LastName" />
+      <Variable x:TypeArguments="x:Int32" Name="CountofBellavistaRows" />
+      <Variable x:TypeArguments="x:Int32" Name="CountofCastleHillRows" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="899.2,2609.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="916.8,2609.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -538,7 +541,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:AddDataRow>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="899.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[UserName]">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="916.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[UserName]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -546,7 +549,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Sender_Email" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="899.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Sender_Email" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="916.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[senderEmail]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -557,7 +560,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="899.2,323.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="916.8,323.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -590,7 +593,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="899.2,6146.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[eMails]">
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="916.8,6146.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[eMails]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="snm:MailMessage">
           <ActivityAction.Argument>
@@ -1182,7 +1185,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Excel_dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="899.2,857.6" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Excel_dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="916.8,857.6" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd1:DataRow">
           <ActivityAction.Argument>
@@ -1232,7 +1235,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Excel_dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="899.2,4112" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Excel_dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="916.8,4112" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd1:DataRow">
           <ActivityAction.Argument>
@@ -1486,7 +1489,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="899.2,425.6" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="916.8,425.6" sap2010:WorkflowViewState.IdRef="TryCatch_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1535,7 +1538,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <If Condition="[BellaVista_Value=True]" DisplayName="Check Whether the date Was Already Present for Bella Vista" sap:VirtualizedContainerService.HintSize="899.2,913.6" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[BellaVista_Value=True]" DisplayName="Check Whether the date Was Already Present for Bella Vista" sap:VirtualizedContainerService.HintSize="916.8,913.6" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1692,7 +1695,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[CastleHill_Value=True]" DisplayName="Check Whether the date Was Already Present for Caste Hill" sap:VirtualizedContainerService.HintSize="899.2,719.2" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[CastleHill_Value=True]" DisplayName="Check Whether the date Was Already Present for Caste Hill" sap:VirtualizedContainerService.HintSize="916.8,719.2" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1802,7 +1805,120 @@
         </Sequence>
       </If.Else>
     </If>
-    <Assign DisplayName="First Row addion of the Excel" sap:VirtualizedContainerService.HintSize="899.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_32">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="916.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="Sequence_81">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch.Try>
+              <Sequence sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_34">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[CountofCastleHillRows]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[CastleHill_Final_dt.Rows.Count-1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,152.8" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_35">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[CountofCastleHillRows]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+          </TryCatch>
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch.Try>
+              <Sequence sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_33">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[CountofBellavistaRows]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[BellaVista_Final_dt.Rows.Count-1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,152.8" sap2010:WorkflowViewState.IdRef="Catch`1_11">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_36">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[CountofBellavistaRows]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+          </TryCatch>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Assign DisplayName="First Row addion of the Excel" sap:VirtualizedContainerService.HintSize="916.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_32">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[Maildate]</OutArgument>
       </Assign.To>
@@ -1815,7 +1931,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <If Condition="[Excel_dt.Rows.Count&lt;=1]" sap:VirtualizedContainerService.HintSize="899.2,8015.2" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[Excel_dt.Rows.Count&lt;=1]" sap:VirtualizedContainerService.HintSize="916.8,4778.4" sap2010:WorkflowViewState.IdRef="If_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1830,7 +1946,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="Hi Team,&#xA;&#xA;The Process has been  completed but no new emails are found. Please check your inbox.&#xA;&#x9;&#x9;&#x9; &#xA;Thanks and Regards&#xA;Dan The Robot&#xA;" Cc="rajaneesh@2automateanything.com;daniel@uhp-pt.com.au" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="353.6,178.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="587" SecureConnection="Auto" SecurePassword="[Password]" Server="smtp.gmail.com" Subject="[&quot;XGYM_CreateLead_&quot;+Maildate+&quot;_Process completion Email&quot;]" To="[Email]">
+          <ui:SendMail ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Bcc="viswanathan346@gmail.com" Body="Dear Admin,&#xA;&#xA;The Process has been  completed but no new emails are found. Please check your inbox.&#xA;&#x9;&#x9;&#x9; &#xA;Thanks and Regards&#xA;Dan The Robot&#xA;" Cc="rajaneesh@2automateanything.com;daniel@uhp-pt.com.au;bradley@uhp-pt.com.au" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="353.6,178.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="587" SecureConnection="Auto" SecurePassword="[Password]" Server="smtp.gmail.com" Subject="[&quot;XGYM_CreateLead_&quot;+Maildate+&quot;_Process completion Email&quot;]" To="[Email]">
             <ui:SendMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
             </ui:SendMail.Files>
@@ -1851,14 +1967,14 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="865.6,7464" sap2010:WorkflowViewState.IdRef="Sequence_68">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="883.2,4227.2" sap2010:WorkflowViewState.IdRef="Sequence_68">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Bella Vista" sap:VirtualizedContainerService.HintSize="803.2,3636" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+          <TryCatch DisplayName="Bella Vista" sap:VirtualizedContainerService.HintSize="820.8,4090.4" sap2010:WorkflowViewState.IdRef="TryCatch_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1866,7 +1982,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence sap:VirtualizedContainerService.HintSize="704,3372.8" sap2010:WorkflowViewState.IdRef="Sequence_55">
+              <Sequence sap:VirtualizedContainerService.HintSize="784,3827.2" sap2010:WorkflowViewState.IdRef="Sequence_55">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="BellaVista_Count" />
                   <Variable x:TypeArguments="x:Int32" Name="BellaVista_count2" />
@@ -1877,7 +1993,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[BellaVista_Final_dt]" DisplayName="Lookup For notes Bella vista" sap:VirtualizedContainerService.HintSize="641.6,327.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_3" LookupColumnName="NOTES" LookupValue="All values present" RowIndex="[BellaVista_Count]">
+                <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[BellaVista_Final_dt]" DisplayName="Lookup For notes Bella vista" sap:VirtualizedContainerService.HintSize="721.6,327.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_3" LookupColumnName="NOTES" LookupValue="All values present" RowIndex="[BellaVista_Count]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1885,7 +2001,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LookupDataTable>
-                <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[BellaVista_Final_dt]" DisplayName="Lookup For notes Bella vista" sap:VirtualizedContainerService.HintSize="641.6,327.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_4" LookupColumnName="NOTES" LookupValue="The data was not processed due to empty filed please check the email" RowIndex="[BellaVista_count2]">
+                <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[BellaVista_Final_dt]" DisplayName="Lookup For notes Bella vista" sap:VirtualizedContainerService.HintSize="721.6,327.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_4" LookupColumnName="NOTES" LookupValue="The data was not processed due to empty filed please check the email" RowIndex="[BellaVista_count2]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1893,7 +2009,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LookupDataTable>
-                <If Condition="[BellaVista_Row_count&gt; 0]" DisplayName="Check for whether the sheet was already created" sap:VirtualizedContainerService.HintSize="641.6,2581.6" sap2010:WorkflowViewState.IdRef="If_14">
+                <If Condition="[BellaVista_Row_count&gt; 0]" DisplayName="Check for whether the sheet was already created" sap:VirtualizedContainerService.HintSize="721.6,3036" sap2010:WorkflowViewState.IdRef="If_14">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1901,14 +2017,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="608,1592" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="688,1932.8" sap2010:WorkflowViewState.IdRef="Sequence_49">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[(BellaVista_Final_dt.Rows.Count&gt;0)]" DisplayName="Check whether the Bella vista locations Have any new value" sap:VirtualizedContainerService.HintSize="545.6,1503.2" sap2010:WorkflowViewState.IdRef="If_13">
+                      <If Condition="[(BellaVista_Final_dt.Rows.Count&gt;0)]" DisplayName="Check whether the Bella vista locations Have any new value" sap:VirtualizedContainerService.HintSize="625.6,1844" sap2010:WorkflowViewState.IdRef="If_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1916,28 +2032,36 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1087.2" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,1314.4" sap2010:WorkflowViewState.IdRef="Sequence_47">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[(BellaVista_Count&gt;=0) or (BellaVista_count2&gt;=0)]" sap:VirtualizedContainerService.HintSize="449.6,998.4" sap2010:WorkflowViewState.IdRef="If_12">
+                            <If Condition="[(BellaVista_Count&gt;=0) or (BellaVista_count2&gt;=0)]" sap:VirtualizedContainerService.HintSize="529.6,1225.6" sap2010:WorkflowViewState.IdRef="If_12">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,582.4" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,696" sap2010:WorkflowViewState.IdRef="Sequence_45">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM Leads Bella Vista" BrowserItemId="1RcpvRR9DfzEZ6RYkQTH6oj6YKvbqzMyr42Reqs_gxxU" ConnectionId="1874ea0a-0355-4cd5-ac55-ae3914cd7862" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="353.6,445.6" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_5" IncludeHeaders="False" ItemSelectionMode="Browse" Range="[stMonth]" RowPosition="[BellaVista_Row_count]" Source="[BellaVista_Final_dt]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Insert">
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_37">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[CountofBellavistaRows]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[BellaVista_Final_dt.Rows.Count-1]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM Leads Bella Vista" BrowserItemId="1RcpvRR9DfzEZ6RYkQTH6oj6YKvbqzMyr42Reqs_gxxU" ConnectionId="1874ea0a-0355-4cd5-ac55-ae3914cd7862" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="433.6,445.6" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_5" IncludeHeaders="False" ItemSelectionMode="Browse" Range="[stMonth]" RowPosition="[BellaVista_Row_count]" Source="[BellaVista_Final_dt]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Insert">
                                     <uga:WriteRangeConnections.FileIdBackup>
                                       <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID2" StoredValue="Browse">
                                         <usau:BackupSlot.BackupValues>
@@ -1958,7 +2082,7 @@
                                       </usau:BackupSlot>
                                     </uga:WriteRangeConnections.RangeWriteModeBackup>
                                   </uga:WriteRangeConnections>
-                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                                     <ui:CommentOut.Body>
                                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,269.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -1987,14 +2111,22 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,368" sap2010:WorkflowViewState.IdRef="Sequence_46">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;No Bella Vista Value&quot;]">
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_38">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[CountofBellavistaRows]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;No Bella Vista Value&quot;]">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -2007,14 +2139,22 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,368" sap2010:WorkflowViewState.IdRef="Sequence_48">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;No Bella Vista Value&quot;]">
+                            <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_39">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[CountofBellavistaRows]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;No Bella Vista Value&quot;]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -2027,14 +2167,22 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,819.2" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,932.8" sap2010:WorkflowViewState.IdRef="Sequence_51">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM Leads Bella Vista" BrowserItemId="1RcpvRR9DfzEZ6RYkQTH6oj6YKvbqzMyr42Reqs_gxxU" ConnectionId="1874ea0a-0355-4cd5-ac55-ae3914cd7862" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="353.6,236.8" sap2010:WorkflowViewState.IdRef="AddSheetConnections_3" ItemSelectionMode="Browse" SheetName="[stMonth]" UseConnectionService="True">
+                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_40">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[CountofBellavistaRows]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[BellaVista_Final_dt.Rows.Count-1]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM Leads Bella Vista" BrowserItemId="1RcpvRR9DfzEZ6RYkQTH6oj6YKvbqzMyr42Reqs_gxxU" ConnectionId="1874ea0a-0355-4cd5-ac55-ae3914cd7862" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="433.6,236.8" sap2010:WorkflowViewState.IdRef="AddSheetConnections_3" ItemSelectionMode="Browse" SheetName="[stMonth]" UseConnectionService="True">
                         <uga:AddSheetConnections.FileIdBackup>
                           <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID3" StoredValue="Browse">
                             <usau:BackupSlot.BackupValues>
@@ -2046,7 +2194,7 @@
                           <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID3}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1RcpvRR9DfzEZ6RYkQTH6oj6YKvbqzMyr42Reqs_gxxU" FriendlyName="XGYM Leads Bella Vista" FullPathHint="XGYM Leads Bella Vista" InputMode="Browse" />
                         </uga:AddSheetConnections.Item>
                       </uga:AddSheetConnections>
-                      <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM Leads Bella Vista" BrowserItemId="1RcpvRR9DfzEZ6RYkQTH6oj6YKvbqzMyr42Reqs_gxxU" ConnectionId="1874ea0a-0355-4cd5-ac55-ae3914cd7862" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="353.6,445.6" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_6" IncludeHeaders="True" ItemSelectionMode="Browse" Range="[stMonth]" RowPosition="0" Source="[BellaVista_Final_dt]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Insert">
+                      <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM Leads Bella Vista" BrowserItemId="1RcpvRR9DfzEZ6RYkQTH6oj6YKvbqzMyr42Reqs_gxxU" ConnectionId="1874ea0a-0355-4cd5-ac55-ae3914cd7862" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="433.6,445.6" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_6" IncludeHeaders="True" ItemSelectionMode="Browse" Range="[stMonth]" RowPosition="0" Source="[BellaVista_Final_dt]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Insert">
                         <uga:WriteRangeConnections.FileIdBackup>
                           <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID4" StoredValue="Browse">
                             <usau:BackupSlot.BackupValues>
@@ -2200,22 +2348,22 @@
               </Catch>
             </TryCatch.Catches>
           </TryCatch>
-          <TryCatch DisplayName="Castle Hill Excel process" sap:VirtualizedContainerService.HintSize="803.2,3739.2" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+          <TryCatch DisplayName="Castle Hill Excel process" sap:VirtualizedContainerService.HintSize="820.8,48" sap2010:WorkflowViewState.IdRef="TryCatch_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence sap:VirtualizedContainerService.HintSize="766.4,3484.8" sap2010:WorkflowViewState.IdRef="Sequence_67">
+              <Sequence sap:VirtualizedContainerService.HintSize="512,960" sap2010:WorkflowViewState.IdRef="Sequence_67">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="704,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_9">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,134.4" sap2010:WorkflowViewState.IdRef="Sequence_58">
                       <sap:WorkflowViewStateService.ViewState>
@@ -2278,7 +2426,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <Sequence DisplayName="Writ Values To Excel" sap:VirtualizedContainerService.HintSize="704,3339.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Writ Values To Excel" sap:VirtualizedContainerService.HintSize="449.6,814.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Int32" Name="CastleHill_Count" />
                     <Variable x:TypeArguments="x:Int32" Name="CastleHill_Count2" />
@@ -2289,7 +2437,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[CastleHill_Final_dt]" DisplayName="Lookup For notes Castle Hill" sap:VirtualizedContainerService.HintSize="641.6,327.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_5" LookupColumnName="NOTES" LookupValue="All values present" RowIndex="[CastleHill_Count]">
+                  <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[CastleHill_Final_dt]" DisplayName="Lookup For notes Castle Hill" sap:VirtualizedContainerService.HintSize="387.2,327.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_5" LookupColumnName="NOTES" LookupValue="All values present" RowIndex="[CastleHill_Count]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2297,7 +2445,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LookupDataTable>
-                  <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[CastleHill_Final_dt]" DisplayName="Lookup For notes Castle Hill" sap:VirtualizedContainerService.HintSize="641.6,327.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_6" LookupColumnName="NOTES" LookupValue="The data was not processed due to empty filed please check the email" RowIndex="[CastleHill_Count2]">
+                  <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[CastleHill_Final_dt]" DisplayName="Lookup For notes Castle Hill" sap:VirtualizedContainerService.HintSize="387.2,327.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_6" LookupColumnName="NOTES" LookupValue="The data was not processed due to empty filed please check the email" RowIndex="[CastleHill_Count2]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2305,22 +2453,22 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LookupDataTable>
-                  <If Condition="[CastleHill_Row_count&gt; 0]" DisplayName="Check for whether the sheet was already created" sap:VirtualizedContainerService.HintSize="641.6,2572.8" sap2010:WorkflowViewState.IdRef="If_17">
+                  <If Condition="[CastleHill_Row_count&gt; 0]" DisplayName="Check for whether the sheet was already created" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="If_17">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="608,1592" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="688,1932.8" sap2010:WorkflowViewState.IdRef="Sequence_64">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[(CastleHill_Final_dt.Rows.Count&gt;0)]" DisplayName="Check whether the Caste Hill locations Have any new value" sap:VirtualizedContainerService.HintSize="545.6,1503.2" sap2010:WorkflowViewState.IdRef="If_16">
+                        <If Condition="[(CastleHill_Final_dt.Rows.Count&gt;0)]" DisplayName="Check whether the Caste Hill locations Have any new value" sap:VirtualizedContainerService.HintSize="625.6,1844" sap2010:WorkflowViewState.IdRef="If_16">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -2328,28 +2476,37 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1087.2" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,1314.4" sap2010:WorkflowViewState.IdRef="Sequence_62">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If Condition="[(CastleHill_Count&gt;=0) or (CastleHill_Count2 &gt;=0)]" sap:VirtualizedContainerService.HintSize="449.6,998.4" sap2010:WorkflowViewState.IdRef="If_15">
+                              <If Condition="[(CastleHill_Count&gt;=0) or (CastleHill_Count2 &gt;=0)]" sap:VirtualizedContainerService.HintSize="529.6,1225.6" sap2010:WorkflowViewState.IdRef="If_15">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,582.4" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,696" sap2010:WorkflowViewState.IdRef="Sequence_60">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM2 Leads Castle Hill" BrowserItemId="1nuJd2AExvvh_TzCHSXGMrxd9IW4VtOXJ1DYVNzuhBgs" ConnectionId="a317ec54-3c55-4068-8282-760b74a746bb" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="353.6,445.6" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_8" IncludeHeaders="False" ItemSelectionMode="Browse" Range="[stMonth]" RowPosition="[CastleHill_Row_count]" Source="[CastleHill_Final_dt]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Insert">
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_41">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[CountofCastleHillRows]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[CastleHill_Final_dt.Rows.Count-1]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM2 Leads Castle Hill" BrowserItemId="1nuJd2AExvvh_TzCHSXGMrxd9IW4VtOXJ1DYVNzuhBgs" ConnectionId="a317ec54-3c55-4068-8282-760b74a746bb" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="433.6,445.6" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_8" IncludeHeaders="False" ItemSelectionMode="Browse" Range="[stMonth]" RowPosition="[CastleHill_Row_count]" Source="[CastleHill_Final_dt]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Insert">
                                       <uga:WriteRangeConnections.FileIdBackup>
                                         <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID5" StoredValue="Browse">
                                           <usau:BackupSlot.BackupValues>
@@ -2375,7 +2532,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uga:WriteRangeConnections>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="CommentOut_10">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,269.6" sap2010:WorkflowViewState.IdRef="Sequence_59">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -2404,14 +2561,22 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,368" sap2010:WorkflowViewState.IdRef="Sequence_61">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;The Caste Hill has no value&quot;]">
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_42">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[CountofCastleHillRows]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;The Caste Hill has no value&quot;]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -2424,14 +2589,22 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,368" sap2010:WorkflowViewState.IdRef="Sequence_63">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;The Caste Hill has no value&quot;]">
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_43">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[CountofCastleHillRows]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;The Caste Hill has no value&quot;]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -2444,14 +2617,22 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,819.2" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_66">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM2 Leads Castle Hill" BrowserItemId="1nuJd2AExvvh_TzCHSXGMrxd9IW4VtOXJ1DYVNzuhBgs" ConnectionId="a317ec54-3c55-4068-8282-760b74a746bb" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="353.6,236.8" sap2010:WorkflowViewState.IdRef="AddSheetConnections_4" ItemSelectionMode="Browse" SheetName="[stMonth]" UseConnectionService="True">
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_44">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[CountofCastleHillRows]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[CastleHill_Final_dt.Rows.Count-1]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM2 Leads Castle Hill" BrowserItemId="1nuJd2AExvvh_TzCHSXGMrxd9IW4VtOXJ1DYVNzuhBgs" ConnectionId="a317ec54-3c55-4068-8282-760b74a746bb" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="433.6,236.8" sap2010:WorkflowViewState.IdRef="AddSheetConnections_4" ItemSelectionMode="Browse" SheetName="[stMonth]" UseConnectionService="True">
                           <uga:AddSheetConnections.FileIdBackup>
                             <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID6" StoredValue="Browse">
                               <usau:BackupSlot.BackupValues>
@@ -2468,7 +2649,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uga:AddSheetConnections>
-                        <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM2 Leads Castle Hill" BrowserItemId="1nuJd2AExvvh_TzCHSXGMrxd9IW4VtOXJ1DYVNzuhBgs" ConnectionId="a317ec54-3c55-4068-8282-760b74a746bb" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="353.6,445.6" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_9" IncludeHeaders="True" ItemSelectionMode="Browse" Range="[stMonth]" RowPosition="0" Source="[CastleHill_Final_dt]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Insert">
+                        <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="XGYM2 Leads Castle Hill" BrowserItemId="1nuJd2AExvvh_TzCHSXGMrxd9IW4VtOXJ1DYVNzuhBgs" ConnectionId="a317ec54-3c55-4068-8282-760b74a746bb" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="433.6,445.6" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_9" IncludeHeaders="True" ItemSelectionMode="Browse" Range="[stMonth]" RowPosition="0" Source="[CastleHill_Final_dt]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Insert">
                           <uga:WriteRangeConnections.FileIdBackup>
                             <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID7" StoredValue="Browse">
                               <usau:BackupSlot.BackupValues>
@@ -2494,13 +2675,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uga:WriteRangeConnections>
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="CommentOut_11">
                           <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,191.2" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="Sequence_65">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ueab:WriteRangeX Destination="[Excel.Sheet(stMonth)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="WriteRangeX_4" IgnoreEmptySource="False" Source="[CastleHill_Final_dt]">
@@ -2544,7 +2725,7 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="769.6,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="515.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2569,7 +2750,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Reference" DataTable="[Excel_dt]" DisplayName="Add reference for queue" sap:VirtualizedContainerService.HintSize="899.2,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Reference" DataTable="[Excel_dt]" DisplayName="Add reference for queue" sap:VirtualizedContainerService.HintSize="916.8,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2577,7 +2758,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:AddDataColumn>
-    <Assign DisplayName="Removing of unwanted data rows" sap:VirtualizedContainerService.HintSize="899.2,115.2" sap2010:WorkflowViewState.IdRef="Assign_27">
+    <Assign DisplayName="Removing of unwanted data rows" sap:VirtualizedContainerService.HintSize="916.8,115.2" sap2010:WorkflowViewState.IdRef="Assign_27">
       <Assign.To>
         <OutArgument x:TypeArguments="sd1:DataTable">[Excel_dt]</OutArgument>
       </Assign.To>
@@ -2607,6 +2788,12 @@ Select row).CopyToDataTable()]</InArgument>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
+    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="899.2,226.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="Sample">
+      <ui:AddQueueItem.ItemInformation>
+        <InArgument x:TypeArguments="x:Int32" x:Key="BellaVistaCount">[CountofBellavistaRows]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="CastlehillCount">[CountofCastleHillRows]</InArgument>
+      </ui:AddQueueItem.ItemInformation>
+    </ui:AddQueueItem>
     <ui:BulkAddQueueItems TimeoutMS="{x:Null}" DisplayName="Bulk Add Queue Items" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="899.2,218.4" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[Excel_dt]" QueueName="MemberDetails">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
